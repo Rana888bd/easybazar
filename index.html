@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176b4d">
+  <meta name="description" content="Easy Bazar — দৈনন্দিন প্রয়োজনীয় পণ্য সহজে অর্ডার করুন।">
+  <title>Easy Bazar | অনলাইন শপ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-strip">🛍️ Easy Bazar-এ স্বাগতম · অর্ডার করতে WhatsApp করুন</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Easy Bazar হোম">
+      <span class="brand-mark">E</span>
+      <span><strong>Easy Bazar</strong><small>আপনার সহজ কেনাকাটা</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home">হোম</a><a href="#products">পণ্যসমূহ</a><a href="#about">আমাদের সম্পর্কে</a><a href="#contact">যোগাযোগ</a>
+    </nav>
+    <a class="header-cta" href="https://wa.me/8801516126330" target="_blank" rel="noopener">WhatsApp অর্ডার ↗</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">সহজ কেনাকাটা, এক জায়গায়</span>
+        <h1>আপনার পছন্দের পণ্য,<br><em>সহজেই আপনার কাছে।</em></h1>
+        <p>প্রয়োজনীয় পণ্য দেখুন, পছন্দ করুন, আর WhatsApp-এ অর্ডার পাঠিয়ে দিন। কেনাকাটা হোক আরও সহজ!</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#products">পণ্য দেখুন <span>↓</span></a>
+          <a class="button button-light" href="https://wa.me/8801516126330?text=আসসালামু%20আলাইকুম%2C%20Easy%20Bazar%20থেকে%20পণ্য%20সম্পর্কে%20জানতে%20চাই।" target="_blank" rel="noopener">আমাদের মেসেজ দিন</a>
+        </div>
+        <div class="hero-trust"><span>✓ সহজ অর্ডার</span><span>✓ সরাসরি যোগাযোগ</span><span>✓ দ্রুত সাড়া</span></div>
+      </div>
+      <div class="hero-art" aria-label="কেনাকাটার ইলাস্ট্রেশন">
+        <div class="art-sun"></div>
+        <div class="art-card card-one"><span>🛍️</span><b>Easy</b><small>shopping</small></div>
+        <div class="art-card card-two"><span>📦</span><b>আপনার পছন্দ</b><small>এক জায়গায়</small></div>
+        <div class="art-bag">E</div>
+        <div class="art-leaf leaf-one"></div><div class="art-leaf leaf-two"></div>
+        <div class="art-caption">SHOP SMART. LIVE EASY.</div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="সুবিধাসমূহ">
+      <div><span class="benefit-icon">🚚</span><span><b>ডেলিভারি তথ্য</b><small>অর্ডারের সময় জেনে নিন</small></span></div>
+      <div><span class="benefit-icon">💬</span><span><b>সরাসরি যোগাযোগ</b><small>WhatsApp-এ কথা বলুন</small></span></div>
+      <div><span class="benefit-icon">🛒</span><span><b>সহজ অর্ডার</b><small>পছন্দের পণ্য বেছে নিন</small></span></div>
+    </section>
+
+    <section class="products-section section-wrap" id="products">
+      <div class="section-heading">
+        <div><span class="eyebrow">আমাদের সংগ্রহ</span><h2>জনপ্রিয় পণ্য</h2><p>পণ্য নির্বাচন করে অর্ডারের তালিকায় যোগ করুন।</p></div>
+        <div class="product-tools">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="পণ্য খুঁজুন..." aria-label="পণ্য খুঁজুন"></label>
+          <select id="categoryFilter" aria-label="ক্যাটাগরি নির্বাচন"><option value="all">সব ক্যাটাগরি</option></select>
+        </div>
+      </div>
+      <div id="categoryChips" class="category-chips"></div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="emptyState" class="empty-state" hidden>এই নামে কোনো পণ্য পাওয়া যায়নি। অন্য নাম দিয়ে খুঁজুন।</div>
+      <div class="cart-panel" id="cart">
+        <div class="cart-title"><div><span class="eyebrow">আপনার নির্বাচন</span><h3>অর্ডারের তালিকা <span id="cartCount" class="count-badge">0</span></h3></div><button id="clearCart" class="text-button" type="button">তালিকা মুছুন</button></div>
+        <div id="cartItems" class="cart-items"><p class="cart-empty">এখনো কোনো পণ্য যোগ করা হয়নি।</p></div>
+        <div class="cart-bottom"><div><small>আনুমানিক পণ্যমূল্য</small><strong id="cartTotal">৳০</strong></div><button id="checkoutButton" class="button button-primary" type="button">WhatsApp-এ অর্ডার পাঠান ↗</button></div>
+        <p class="fine-print">ডেলিভারি চার্জ ও চূড়ান্ত মূল্য WhatsApp-এ নিশ্চিত করা হবে।</p>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-icon">E<span>✦</span></div>
+      <div><span class="eyebrow">আমাদের সম্পর্কে</span><h2>Easy Bazar — কেনাকাটা হোক সহজ</h2><p>আমরা চাই আপনি সহজে পণ্য দেখতে পারেন এবং সরাসরি আমাদের সঙ্গে কথা বলে অর্ডার করতে পারেন। পণ্যের দাম, স্টক ও ডেলিভারি সম্পর্কে জানতে আমাদের মেসেজ দিন।</p></div>
+      <a class="button button-light" href="https://wa.me/8801516126330" target="_blank" rel="noopener">যোগাযোগ করুন</a>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact">
+      <div><span class="eyebrow">যোগাযোগ</span><h2>কোনো প্রশ্ন আছে?</h2><p>পণ্য, দাম বা ডেলিভারি সম্পর্কে জানতে সরাসরি WhatsApp-এ যোগাযোগ করুন।</p></div>
+      <div class="contact-card"><div class="contact-symbol">✆</div><div><small>WhatsApp / ফোন</small><strong>+880 1516-126330</strong><span>অর্ডার ও পণ্যের তথ্যের জন্য</span></div><a href="https://wa.me/8801516126330" target="_blank" rel="noopener" aria-label="WhatsApp-এ যোগাযোগ">↗</a></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">E</span><span><strong>Easy Bazar</strong><small>আপনার সহজ কেনাকাটা</small></span></a><p>© <span id="year"></span> Easy Bazar. সর্বস্বত্ব সংরক্ষিত।</p><a href="#home">উপরে যান ↑</a></footer>
+  <a class="floating-whatsapp" href="https://wa.me/8801516126330" target="_blank" rel="noopener" aria-label="WhatsApp-এ যোগাযোগ">☏</a>
+  <script src="script.js"></script>
+</body>
+</html>
